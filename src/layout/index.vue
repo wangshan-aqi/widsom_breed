@@ -1,16 +1,12 @@
 <template>
   <a-layout style="min-height: 100vh">
-    <a-layout-sider v-model:collapsed="collapsed" collapsible>
-      <div class="logo"></div>
-    </a-layout-sider>
+    <layout-sider-view />
     <a-layout>
       <layout-header-view />
       <a-layout-content style="margin: 0 16px">
         <breadcrumb-view></breadcrumb-view>
-        <div
-          :style="{ padding: '24px', background: '#fff', minHeight: '360px' }"
-        >
-          Bill is a cat.
+        <div :style="{ padding: '24px', background: '#fff' }">
+          <router-view></router-view>
         </div>
       </a-layout-content>
       <layout-footer-view />
@@ -21,21 +17,7 @@
 import BreadcrumbView from '@/layout/components/BreadcrumbView.vue';
 import LayoutFooterView from '@/layout/components/LayoutFooterView.vue';
 import LayoutHeaderView from '@/layout/components/LayoutHeaderView.vue';
-// import {
-//   PieChartOutlined,
-//   DesktopOutlined,
-//   UserOutlined,
-//   TeamOutlined,
-//   FileOutlined,
-// } from '@ant-design/icons-vue';
-import { reactive, ref } from 'vue';
-
-const collapsed = ref<boolean>(false);
-// const selectedKeys = ref<string[]>(["1"]);
-const a = reactive({
-  b: 1,
-});
-console.log(a.b);
+import LayoutSiderView from '@/layout/components/LayoutSiderView.vue';
 </script>
 <style>
 #components-layout-demo-side .logo {
