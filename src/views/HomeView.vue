@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloView from "@/components/HelloView.vue";
+import HelloView from '@/components/HelloView.vue';
 </script>
 
 <template>
