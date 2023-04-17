@@ -40,35 +40,35 @@
 </template>
 <script lang="ts">
 // 引入配置
-import { ConfigProvider } from "ant-design-vue";
-import { reactive, ref } from "vue";
+import { ConfigProvider } from 'ant-design-vue';
+import { reactive, ref } from 'vue';
 export default {
   setup() {
     const checked = ref(false);
 
     //与app.vue一致
     const colorState = reactive({
-      primaryColor: "#25b864",
-      textColor: "#000000"
+      primaryColor: '#25b864',
+      textColor: '#000000',
     });
     const onColorChange = (type: string, e: Event) => {
-      console.log(type, (e.target as HTMLInputElement).value, "颜色");
+      console.log(type, (e.target as HTMLInputElement).value, '颜色');
       Object.assign(colorState, {
-        [type]: (e.target as HTMLInputElement).value
+        [type]: (e.target as HTMLInputElement).value,
       });
       ConfigProvider.config({
-        theme: colorState
+        theme: colorState,
       });
     };
     const info = () => {
-      console.log("info");
+      console.log('info');
     };
     return {
       checked,
       colorState,
       onColorChange,
-      info
+      info,
     };
-  }
+  },
 };
 </script>

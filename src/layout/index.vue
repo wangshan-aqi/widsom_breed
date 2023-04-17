@@ -1,7 +1,7 @@
 <template>
   <a-layout style="min-height: 100vh">
     <a-layout-sider v-model:collapsed="collapsed" collapsible>
-      <div class="logo" />
+      <div class="logo"></div>
     </a-layout-sider>
     <a-layout>
       <layout-header-view />
@@ -18,9 +18,9 @@
   </a-layout>
 </template>
 <script lang="ts" setup>
-import BreadcrumbView from "@/layout/components/BreadcrumbView.vue";
-import LayoutFooterView from "@/layout/components/LayoutFooterView.vue";
-import LayoutHeaderView from "@/layout/components/LayoutHeaderView.vue";
+import BreadcrumbView from '@/layout/components/BreadcrumbView.vue';
+import LayoutFooterView from '@/layout/components/LayoutFooterView.vue';
+import LayoutHeaderView from '@/layout/components/LayoutHeaderView.vue';
 // import {
 //   PieChartOutlined,
 //   DesktopOutlined,
@@ -28,13 +28,14 @@ import LayoutHeaderView from "@/layout/components/LayoutHeaderView.vue";
 //   TeamOutlined,
 //   FileOutlined,
 // } from '@ant-design/icons-vue';
-import { reactive, ref } from "vue";
+import { reactive, ref } from 'vue';
 
 const collapsed = ref<boolean>(false);
 // const selectedKeys = ref<string[]>(["1"]);
 const a = reactive({
   b: 1,
 });
+console.log(a.b);
 </script>
 <style>
 #components-layout-demo-side .logo {
@@ -46,7 +47,7 @@ const a = reactive({
 .site-layout .site-layout-background {
   background: #fff;
 }
-[data-theme="dark"] .site-layout .site-layout-background {
+[data-theme='dark'] .site-layout .site-layout-background {
   background: #141414;
 }
 </style>

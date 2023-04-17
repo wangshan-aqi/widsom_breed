@@ -37,15 +37,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
 
-const selectedKeys = ref<string[]>(["1"]);
+const selectedKeys = ref<string[]>(['1']);
 function a() {
-  console.log("a");
+  console.log('a');
   bn();
 }
 function bn() {
-  console.log("bn");
+  console.log('bn');
 }
 a();
 </script>
