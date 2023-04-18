@@ -1,11 +1,9 @@
 <template>
   <a-config-provider>
-    <!-- <RouterView /> -->
-    <Layout />
+    <RouterView />
   </a-config-provider>
 </template>
 <script setup lang="ts">
-import Layout from '@/layout/index.vue';
 import { ConfigProvider } from 'ant-design-vue';
 import { reactive } from 'vue';
 

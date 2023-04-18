@@ -4,6 +4,10 @@
     <p class="text-blue-100">{{ count }}</p>
     <x-button type="primary">测试</x-button>
   </div>
+  <div>
+    <p>测试二级页面</p>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script lang="ts" setup>
