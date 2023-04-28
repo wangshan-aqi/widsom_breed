@@ -68,9 +68,6 @@ const list = [
         key: '2.1',
         title: '关于二级',
         path: '/about/test',
-        children: [
-          { key: '2.1.1', path: '/about/test/temp', title: '关于三级' },
-        ],
       },
     ],
   },

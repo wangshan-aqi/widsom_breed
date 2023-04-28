@@ -2,11 +2,10 @@
   <div class="container">
     TailWindCss 配置，使用
     <p class="text-blue-100">{{ count }}</p>
-    <x-button type="primary">测试</x-button>
-  </div>
-  <div>
-    <p>测试二级页面</p>
-    <router-view></router-view>
+    <a-button type="primary">测试</a-button>
+    <div class="content-wrap">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -17,6 +16,12 @@ const count = ref(0);
 </script>
 
 <style scoped lang="less">
+.container {
+  .content-wrap {
+    overflow: hidden;
+    height: 500px;
+  }
+}
 .p-color {
   color: @default-green;
 }

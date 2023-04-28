@@ -7,7 +7,7 @@ const homeRoutes: RouteRecordRaw[] = [
     meta: {
       title: '首页',
     },
-    component: () => import('@/views/HomeView.vue'),
+    component: () => import('@/views/home/HomeView.vue'),
   },
   {
     name: 'about',
@@ -15,7 +15,7 @@ const homeRoutes: RouteRecordRaw[] = [
     meta: {
       title: '关于',
     },
-    component: () => import('@/views/TailWindCss.vue'),
+    component: () => import('@/views/users/TailWindCss.vue'),
     children: [
       {
         name: 'test',
@@ -23,17 +23,7 @@ const homeRoutes: RouteRecordRaw[] = [
         meta: {
           title: '测试',
         },
-        component: () => import('@/views/tailwindChild.vue'),
-        children: [
-          {
-            path: 'temp',
-            name: 'temp',
-            meta: {
-              title: '临时',
-            },
-            component: () => import('@/views/tailwindChild2.vue'),
-          },
-        ],
+        component: () => import('@/views/users/tailwindChild.vue'),
       },
     ],
   },
